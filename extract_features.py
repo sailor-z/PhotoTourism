@@ -336,12 +336,9 @@ if __name__ == "__main__":
 
     detector = ExtractSIFT(config.num_kp)
     #detector = ExtractORB(opt.num_kp)
-    '''
     train_seqs = ['brandenburg_gate', 'buckingham_palace', 'colosseum_exterior','grand_place_brussels', \
               'hagia_sophia_interior', 'notre_dame_front_facade', 'palace_of_westminster', 'pantheon_exterior', \
               'taj_mahal', 'temple_nara_japan', 'trevi_fountain', 'westminster_abbey']
-    '''
-    train_seqs = ['brandenburg_gate']
-#    extract_features(config, train_seqs, detector)
-#    dump_nn(config, train_seqs)
+    extract_features(config, train_seqs, detector)
+    dump_nn(config, train_seqs)
     dump_pair(config, train_seqs)
